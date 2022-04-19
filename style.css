@@ -21,6 +21,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    position: fixed;
 }
 
 nav ul{
