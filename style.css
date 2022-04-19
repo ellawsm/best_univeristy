@@ -1,0 +1,652 @@
+*{
+    font-size: 10px;
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    background: linear-gradient(rgba(25,66,97,0.8),rgba(6,68,115,0.6)), url(images/university.jpg);
+    background-size: cover;
+    height: 100vh;
+    /* position:relative; */
+}
+
+.logo{
+    width: 200px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+}
+
+
+nav ul li a{
+    font-size: 1.6rem;
+    color: white;
+    padding: 1rem;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+nav ul li::after{
+    background: rgb(153, 204, 255);
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+nav ul li:hover::after{
+    width: 70%;
+    height: 2px;
+}
+
+.headerText{
+    color: white;
+    text-align: center;
+    transform: translate(0px,200px);
+}
+
+.headerText > h1{
+    font-size: 5rem;
+    display: inline-block;
+}
+
+.headerText > p {
+    font-size: 1.6rem;
+    font-weight: 100;
+    padding: 0  1rem;
+}
+
+.hero-btn{
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 100;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 0.6rem 1rem;
+    display: inline-block;
+    margin: 1rem;
+    transition: 1s;
+}
+
+.hero-btn:hover{
+    background: rgb(153, 204, 255,0.8);
+}
+
+.crossIcon, .menuIcon{
+    display: none;
+}
+
+
+@media (max-width: 700px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        background-color: rgb(245, 209, 147);
+        width: 200px;
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        right: -300px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav ul{
+        display: block;
+        padding: 1rem;
+    }
+
+    nav ul li {
+        padding: 1rem;
+    }
+
+    nav .fa{
+        color: white;
+        font-size: 20px;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    nav ul li::after{
+        background: rgb(153, 204, 255);
+        content: '';
+        width: 0%;
+        height: 2px;
+        display: block;
+        margin: 0 0 0 1rem;
+        transition: 0.5s;
+    }
+    
+    nav ul li:hover::after{
+        width: 30%;
+        height: 2px;
+    }
+
+    .menuIcon .fa-solid{
+        color: white;
+        font-size: 30px;
+        padding: 1rem;
+        cursor: pointer;
+    }
+
+    .crossIcon, .menuIcon{
+        display: block;
+    }
+
+}
+
+/* Courses */
+.course{
+    text-align: center;
+    padding: 10rem 5rem;
+    line-height: 3rem;
+}
+
+.courseBoxContainer{
+    display: flex;
+    padding-top: 2rem;
+    margin: 2rem;
+}
+h1{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.course p{
+    color: #777;
+    font-size: 1.2rem;
+}
+
+.courseBox{
+    background-color: rgb(255, 217, 153,0.4);
+    margin: 1rem;
+    padding: 3rem;
+    transition: 0.5s;
+}
+
+.courseBox:hover{
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32);
+}
+
+@media (max-width: 700px){
+    .courseBoxContainer{
+        flex-direction: column;
+    }
+}
+
+/* Campus */
+.campus{
+    text-align: center;
+    width: 80%;
+    line-height: 3rem;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10rem;
+}
+
+.campus p{
+    color: #777;
+    font-size: 1.2rem;
+    line-height: 4rem;
+}
+
+.campusBoxContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+}
+
+.campusBox{
+    overflow: hidden;
+    position: relative;
+    flex-basis: 32%;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+.campusBox img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 1rem;
+    top: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background:  rgb(255, 217, 153,0.5);
+}
+
+.layer p{
+    color: white;
+    font-size: 1.4rem;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0;
+    transition: 1s;
+}
+
+.layer:hover p{
+    opacity: 1;
+    bottom: 40%;
+}
+
+@media (max-width: 700px){
+    .campusBoxContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .layer p{
+        font-size: 4rem;
+    }
+    .campusBox{
+        width: 70%;
+    }
+
+}
+
+/* Facilities */
+.facilities{
+    text-align: center;
+    width: 80%;
+    line-height: 3rem;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10rem;
+}
+
+.facilitiesBoxContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.facilitiesBox{
+    overflow: hidden;
+    position: relative;
+    flex-basis: 32%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.facilitiesBox img{
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+}
+
+.facilities p{
+    color: #777;
+    font-size: 1.2rem;
+}
+
+.facilitiesBox p{
+    text-align: left;
+}
+
+.facilitiesBox img{
+    display: block;
+}
+
+.facilities h3{
+    text-align: left;
+    padding-left: 0;
+}
+
+@media (max-width: 700px){
+    .facilitiesBoxContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .facilitiesBox{
+        width: 70%;
+    }
+
+}
+
+/* Testimonials */
+
+.testimonials{
+    text-align: center;
+    width: 80%;
+    line-height: 3rem;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10rem;
+}
+
+.testimonialsContainer{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.testimonials img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1.2rem;
+    margin-right: 2rem;
+}
+
+.testimonials p{
+    color: #777;
+    font-size: 1.2rem;
+}
+
+
+.testimonialsBox{
+    background-color: rgb(255, 217, 153,0.3) ;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    text-align: left;
+}
+
+.testimonialsBox p{
+    text-align: left;
+}
+
+.testimonialsBox h2{
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.testimonialsBox .fa-solid{
+    font-size: 1.6rem;
+    color: rgb(255,182,140);
+}
+
+@media (max-width: 700px){
+    .testimonialsContainer{
+        flex-direction: column;
+    }
+}
+
+/* Call to Action */
+.callToAction{
+    background:linear-gradient(rgba(25,66,97,0.8),rgba(6,68,115,0.6)),url(images/contact.jpg);
+    width: 80%;
+    background-size: cover;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-position: center;
+    margin: auto;
+    margin-bottom: 10rem;
+}
+
+.callToAction h1{
+    color: white;
+    padding: 2rem;
+}
+
+.callToAction a{
+    margin-bottom: 2rem;
+}
+
+@media (max-width:700px){
+    .callToAction h1{
+        font-size: 2rem;
+    }
+}
+
+/* Footer */
+.footer{
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.footer h3{
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.footer p{
+    color: #777;
+    margin: 0.5rem;
+}
+
+.icon i{
+    margin: 1rem;
+    font-size: 2rem;
+    color: rgb(255,182,140);
+}
+
+    /* End */
+ /* About Us Page */
+
+ .aboutUsHeader{
+    background: linear-gradient(rgba(25,66,97,0.8),rgba(6,68,115,0.6)), url(images/sub_header.jpg);
+    background-size: cover;
+    height: 300px;
+ }
+ .aboutUsHeader .headerText{
+     transform: translate(0,90px);
+ }
+
+ .aboutUs{
+    display: flex;
+    margin: 15rem 3rem 10rem 3rem;
+ }
+
+ .aboutUs > *{
+    flex: 48%;
+    margin: 1.5rem;
+ }
+
+ .aboutUs p{
+    color: #777;
+    margin-top: 2rem;
+ }
+ .aboutUs img{
+     width: 50%;
+     height: auto;
+     border-radius: 1rem;
+ }
+
+ @media (max-width:700px){
+     .aboutUs{
+         flex-direction: column;
+         align-items: center;
+     }
+     .aboutUs img{
+         width: 80%;
+     }
+ }
+
+    /* End */
+ /* Course page */
+
+ .courseHeader{
+    background: linear-gradient(rgba(25,66,97,0.8),rgba(6,68,115,0.6)), url(images/course.jpg);
+    background-size: cover;
+    background-position:30% 25%;
+    height: 300px;
+ }
+ .courseHeader .headerText{
+     transform: translate(0,90px);
+ }
+
+     /* End */
+ /* News page */
+
+ .newsHeader{
+    background: linear-gradient(rgba(25,66,97,0.8),rgba(6,68,115,0.6)), url(images/news.jpg);
+    background-size: cover;
+    background-position: center ;
+    height: 300px;
+ }
+ .newsHeader .headerText{
+     transform: translate(0,90px);
+ }
+
+.news{
+    display: flex;
+    margin: 15rem 3rem 10rem 8rem;
+    justify-content: space-between;
+}
+
+.news-left{
+    flex-basis: 65%;
+    text-align: center;
+}
+
+.news-left img{
+    width: 90%;
+}
+
+.news-left h2{
+    text-align: left;
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+
+.news-left p{
+    text-align: left;
+    color: #777;
+    font-size: 1.2rem;
+    line-height: 150%;
+}
+
+.news-right{
+    flex-basis: 25%;
+    padding-left: 1rem;
+}
+
+.news-right h1{
+    color: #777;
+}
+
+.news-right hr {
+    margin: 1rem 0;
+}
+
+.news-right p{
+    padding: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.news-right span{
+    color: #777;
+}
+
+.subscribe{
+    border: 1px solid gainsboro;
+    margin: 4rem 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe input, .subscribe textarea{
+    margin: 1rem 0;
+    border: none;
+    background-color: gainsboro;
+    padding: 0.5rem;   
+}
+.subscribe input::placeholder, .subscribe textarea::placeholder{
+    padding-left: 0.5rem;
+}
+
+.subscribe button{
+    margin-top: 2rem;
+}
+
+    /* End */
+ /* Contact Us page */
+
+ .contactHeader{
+    background: linear-gradient(rgba(25,66,97,0.8),rgba(6,68,115,0.6)), url(images/contactUs.jpg);
+    background-size: cover;
+    background-position: 0% 20% ;
+    height: 300px;
+ }
+ .contactHeader .headerText{
+     transform: translate(0,90px);
+ }
+
+
+.location{
+    width: 80%;
+    margin: 10rem auto;
+    margin-bottom: 3rem;   
+}
+
+iframe{
+    width: 100%;
+}
+
+.contactContainer{
+    display: flex;
+    width: 80%;
+    padding: 0 10%;
+    justify-content: space-between;
+}
+
+.contact1{
+    flex-basis: 45%;
+}
+
+.contactInfo{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.contactInfo .fa-solid{
+    color: #777;
+    font-size: 22px;
+    margin-right: 2rem;
+}
+
+.contactInfo > div > p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.contactInfo > div > span{
+    color: #777;
+}
+
+.contact2{
+    flex-basis: 45%;
+}
+
+.contact2 form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact2 form > *{
+    margin: 0.8rem 0;
+    padding: 0.5rem;
+}
+
+@media (max-width:700px){
+    .contactContainer{
+        flex-direction: column;
+    }
+}

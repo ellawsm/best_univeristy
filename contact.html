@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9e6458a46d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Best University</title>
+</head>
+<body>
+    <section class="contactHeader">
+        <nav>
+        <a href="/index.html"><img src="images/logo.png" alt="Univerisity" class="logo"></a>
+        <div class="nav-links">
+            <div class="crossIcon"><i class="fa fa-times" onclick="hideMenu()"></i></div>
+            <ul>
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/about.html">ABOUT</a></li>
+                <li><a href="/course.html">COURSE</a></li>                
+                <li><a href="/news.html">NEWS</a></li>                
+                <li><a href="/contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="menuIcon"><i class="fa-solid fa-bars" onclick="showMenu()"></i></div>
+        </nav>
+        <div class="headerText">
+            <h1>Contact Us</h1>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="contact">
+        <div class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7384.564036155364!2d114.34401872559125!3d22.267304441362818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34041cdae2352e47%3A0x74bdc1def022c1!2sNorth%20Ninepin%20Island!5e0!3m2!1sen!2shk!4v1650283285323!5m2!1sen!2shk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="contactContainer">
+            <div class="contact1">
+                <div class="contactInfo">
+                    <i class="fa-solid fa-house"></i>
+                    <div>
+                        <p>2348 Eagles Nest Drive, Sacramento</p>
+                        <span>In the Middle of Nowhere</span>
+                    </div>
+                </div>
+                <div class="contactInfo">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <p>+1 0123456789</p>
+                        <span>Don't even think of calling</span>
+                    </div>
+                </div>
+                <div class="contactInfo">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <p>fakeemail@gmail.com</p>
+                        <span>Don't even think of sending</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact2">
+                <form action="form-handler.php" method="post">
+                    <input type="text" placeholder="Your Name" required name="name">
+                    <input type="email" placeholder="Your Email" required name="email">
+                    <textarea name="" id="" rows="10" placeholder="Your Question" required name="message"></textarea>
+                    <button class="hero-btn">Send My Question</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+ 
+    <!-- Footer -->
+    <section class="footer">
+        <h3>About Us</h3>
+        <p>Free Stock Pictures all from Pexels.</p>
+        <div class="icon">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <p>Website Template Made by Ella</p>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
