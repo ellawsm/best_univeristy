@@ -21,7 +21,6 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    position: fixed;
 }
 
 nav ul{
@@ -98,7 +97,7 @@ nav ul li:hover::after{
     .nav-links{
         background-color: rgb(245, 209, 147);
         width: 200px;
-        position: absolute;
+        position: fixed;
         height: 100vh;
         top: 0;
         right: -300px;
